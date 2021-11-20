@@ -25,7 +25,7 @@ public class UIHandler : MonoBehaviour
     public void EnteredName(string name)
     {
         Debug.Log(nameInputField.text);
-        GameManager.Instance.playerName = nameInputField.text;
+        GameManager.Instance.newPlayerName = nameInputField.text;
     }
 
     public void StartMain()

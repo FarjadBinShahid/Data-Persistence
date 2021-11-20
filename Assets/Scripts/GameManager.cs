@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
+    public string newPlayerName;
     public string playerName;
     public int score;
 
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         BestScore data = new BestScore();
         data.score = score;
-        data.name = playerName;
+        data.name = newPlayerName;
         string json = JsonUtility.ToJson(data);
 
         File.WriteAllText(Application.persistentDataPath+"/score.json", json);
